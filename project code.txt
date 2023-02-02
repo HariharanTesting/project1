@@ -1,0 +1,60 @@
+package day1;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demoproject {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	System.setProperty("webdriver.chrome.driver","C:\\browser driver\\chromedriver.exe");
+		ChromeDriver driver=new ChromeDriver();
+		driver.get("https://blazedemo.com/");
+		
+		driver.findElement(By.xpath("//body/div[3]/form[1]/div[1]/input[1]")).click();
+		
+		
+		
+List<org.openqa.selenium.WebElement> images=driver.findElements(By.tagName("img"));
+		 int noi=images.size();
+	  System.out.println("the total number of images are:"+noi);
+		
+	}
+ }
+	 
+	 List<WebElement> link=driver.findElements(By.tagName("a"));
+	for(WebElement s:link)
+	   {
+	    	System.out.println("the link name is :"+s.getText());
+	   
+	  }
+	}
+	
+{
+        String actualTitle = driver.getTitle();
+        driver.manage().window().maximize();
+         String expectedTitle = "Blazedemo";
+          
+          if(actualTitle.equalsIgnoreCase(expectedTitle))
+        	  System.out.println("Title Matched ");
+          else 
+         System.out.println("Title didnt match");
+}
+ }
+
+
+         
+      
+          
+  
+          
+	
+       
+  	
+	
+
+
